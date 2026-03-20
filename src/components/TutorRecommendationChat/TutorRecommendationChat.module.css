@@ -1,0 +1,262 @@
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff; /* Pure white for better contrast */
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Stronger shadow for better readability */
+}
+
+.inputContainer {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.15); /* Slightly more opaque */
+  padding: 20px;
+  border-radius: 60px;
+  backdrop-filter: blur(10px);
+}
+
+.input {
+  flex: 1;
+  padding: 18px 25px;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.1rem;
+  background: #ffffff; /* Pure white background */
+  color: #1a1a1a; /* Dark gray for text - high contrast */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.input::placeholder {
+  color: #666666; /* Medium gray for placeholder - still visible */
+  font-weight: 300;
+}
+
+.button {
+  padding: 18px 35px;
+  border: none;
+  border-radius: 40px;
+  background: #ffffff; /* Pure white */
+  color: #5a67d8; /* Darker purple for better contrast */
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: #f0f2f5; /* Slight off-white on hover */
+  color: #434190; /* Darker purple */
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  color: #4a5568; /* Dark gray for disabled text */
+}
+
+.recommendations {
+  background: #ffffff; /* Pure white background */
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2d3748; /* Dark gray - very readable */
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.tutorCard {
+  background: #f8fafd; /* Light gray background */
+  border-radius: 20px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0; /* Light border */
+  animation: fadeIn 0.5s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.tutorCard:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+  background: #ffffff; /* Pure white on hover */
+  border-color: #667eea;
+}
+
+.tutorCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c; /* Almost black - maximum contrast */
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.tutorCard p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #2d3748; /* Dark gray - excellent readability */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tutorCard b {
+  color: #5a67d8; /* Dark purple for emphasis */
+  font-weight: 600;
+}
+
+.error {
+  background: #fff5f5; /* Light red background */
+  color: #c53030; /* Dark red text - very readable */
+  padding: 15px 25px;
+  border-radius: 50px;
+  margin: 20px 0;
+  text-align: center;
+  font-weight: 500;
+  border-left: 5px solid #c53030;
+  box-shadow: 0 5px 15px rgba(197, 48, 48, 0.1);
+}
+
+.text {
+  color: #ffffff; /* Pure white text */
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3); /* Darker semi-transparent background */
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  margin: 20px 0;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for better contrast */
+}
+
+/* Loading animation */
+.button:disabled {
+  position: relative;
+  overflow: hidden;
+}
+
+.button:disabled::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(90, 103, 216, 0.2), transparent); /* Purple tinted loading effect */
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  to {
+    left: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+
+  .inputContainer {
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.2); /* Darker background on mobile */
+    padding: 15px;
+    border-radius: 30px;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tutorCard {
+    padding: 20px;
+  }
+
+  .tutorCard h3 {
+    font-size: 1.3rem;
+    color: #1a202c;
+  }
+
+  .tutorCard p {
+    font-size: 1rem;
+    color: #2d3748;
+  }
+
+  .text {
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
