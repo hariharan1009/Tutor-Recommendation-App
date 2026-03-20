@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 Tutor Recommendation App
 
-## Getting Started
+An AI-powered web application that recommends tutors based on user input.
+Built using **Next.js**, **Groq AI**, and **external APIs** to simulate real-world tutor data.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+* 🔍 Search tutors based on subject or learning need
+* 🤖 AI-generated tutor recommendations (Groq API)
+* 🌐 Real-time random user data (RandomUser API)
+* ⭐ Dynamic rating and experience generation
+* 🎨 Responsive and modern UI
+* ⚡ Fast and lightweight (Next.js App Router)
+
+---
+
+## 🧠 How It Works
+
+1. User enters a subject (e.g., "Java", "Math")
+2. Frontend sends request to backend API
+3. Backend:
+
+   * Fetches random real names from API
+   * Uses Groq AI to generate relevant subjects
+4. Combines data and returns tutor list
+5. UI displays recommended tutors
+
+---
+
+## 🛠️ Tech Stack
+
+* Frontend: Next.js (React, TypeScript)
+* Backend: Next.js API Routes
+* AI: Groq API (LLaMA 3.1)
+* External API: RandomUser API
+* Styling: CSS Modules
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/tutor-recommendation-app.git
+cd tutor-recommendation-app
+```
+
+---
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3️⃣ Add environment variables
+
+Create a file:
+
+```
+.env.local
+```
+
+Add your Groq API key:
+
+```
+GROQ_API_KEY=your_api_key_here
+```
+
+---
+
+### 4️⃣ Run the project
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open in browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📂 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+ ├── app/
+ │    ├── api/
+ │    │    └── groq-recommendations/
+ │    │         └── route.ts
+ │    └── page.tsx
+ │
+ ├── components/
+ │    └── TutorRecommendationChat/
+ │         ├── TutorRecommendationChat.tsx
+ │         └── TutorRecommendationChat.module.css
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚠️ Important Notes
 
-## Deploy on Vercel
+* Do NOT upload `.env.local` to GitHub
+* Add `.env.local` in `.gitignore`
+* Requires internet connection for APIs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔮 Future Enhancements
+
+* 🎥 YouTube learning video integration
+* ⭐ Star rating UI
+* 👤 User authentication
+* 📊 Personalized recommendations
+* 🌙 Dark mode
+
+---
+
+## 📸 Demo
+
+Enter a subject like:
+
+```
+Java / Math / Science
+```
+
+Get:
+
+* Real tutor names
+* AI-generated subjects
+* Experience & rating
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Hariharan**
+
+* GitHub: https://github.com/hariharan1009
+
